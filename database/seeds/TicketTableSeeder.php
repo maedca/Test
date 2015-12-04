@@ -7,6 +7,7 @@
  * Time: 3:46 PM
  */
 use Test\Entities\Ticket;
+use Faker\Generator;
 
 class TicketTableSeeder extends BaseSeeder
 {
@@ -16,13 +17,13 @@ class TicketTableSeeder extends BaseSeeder
     }
 
 
-    public function getDummyData(\Faker\Generator $faker, array $customValues = array())
+    public function getDummyData(Generator $faker, array $customValues = array())
     {
-        // TODO: Implement getDummyData() method.
+
         return [
             'title' => $faker->sentence(),
             'status' => $faker->randomElement(['open', 'closed']),
-            'user_id' => 5
+            'user_id' => $this->getRandom('User')->id
             //'user_id' => $this->getRandom('User')->id
         ];
     }
