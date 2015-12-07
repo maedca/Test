@@ -1,7 +1,8 @@
-<?php namespace Test\Commands;
+<?php
 
-abstract class Command {
+namespace Test\Commands;
 
-	//
-
+abstract class Command
+{
+    //
 }

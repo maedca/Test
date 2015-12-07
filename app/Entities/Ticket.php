@@ -1,9 +1,10 @@
-<?php namespace Test\Entities;
+<?php
+
+namespace Test\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Ticket extends Model {
-
-	//
-
+class Ticket extends Model
+{
+    //
 }
