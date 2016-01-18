@@ -19,6 +19,10 @@ Route::get('/',[
     'as' => 'tickets.latest',
     'uses' => 'TicketsController@latest'
 ]);
+Route::get('/abertas',[
+    'as' => 'tickets.open',
+    'uses' => 'TicketsController@open'
+]);
 Route::get('/populares',[
     'as' => 'tickets.popular',
     'uses' => 'TicketsController@popular'

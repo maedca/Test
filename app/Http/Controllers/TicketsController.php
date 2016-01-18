@@ -9,19 +9,23 @@ class TicketsController extends Controller {
 
     public function latest()
     {
-        dd('latest');
+        return view('tickets/list');
     }
     public function popular()
     {
-        dd('popular');
+        return view('tickets/list');
     }
     public function closed()
     {
-        dd('tutoriales');
+        return view('tickets/list');
     }
     public function details($id)
     {
-        dd('detalle: '. $id);
+        return view('tickets/details');
+    }
+    public function open()
+    {
+        return view('tickets/list');
     }
 
 }

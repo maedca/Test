@@ -144,6 +144,11 @@ return [
 		'Test\Providers\ConfigServiceProvider',
 		'Test\Providers\EventServiceProvider',
 		'Test\Providers\RouteServiceProvider',
+		/*
+		 * nuestro provider de laravel collective
+		 * */
+		//'Collective\Html\HtmlServiceProvider',
+		'Test\Providers\HtmlServiceProvider',
 
 	],
 
@@ -193,6 +198,8 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 
+		'Form' => Collective\Html\FormFacade::class,
+		'Html' => Collective\Html\HtmlFacade::class,
 	],
 
 ];
