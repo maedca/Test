@@ -1,5 +1,6 @@
 <?php namespace Test\Http\Controllers;
 
+use Test\Entities\Ticket;
 use Test\Http\Requests;
 use Test\Http\Controllers\Controller;
 
@@ -9,7 +10,8 @@ class TicketsController extends Controller {
 
     public function latest()
     {
-        return view('tickets/list');
+        $tickets = Ticket::orderBy('created_at', 'DESC')->paginate(10);
+        return view('tickets/list', compact('tickets'));
     }
     public function popular()
     {
@@ -21,7 +23,8 @@ class TicketsController extends Controller {
     }
     public function details($id)
     {
-        return view('tickets/details');
+        $ticket = Ticket::findOrFail($id);
+        return view('tickets/details' ,compact('ticket'));
     }
     public function open()
     {
