@@ -1,6 +1,7 @@
 <?php namespace Test\Http\Controllers;
 
 use Test\Entities\Ticket;
+use Test\Entities\TicketComment;
 use Test\Http\Requests;
 use Test\Http\Controllers\Controller;
 
@@ -24,7 +25,8 @@ class TicketsController extends Controller {
     public function details($id)
     {
         $ticket = Ticket::findOrFail($id);
-        return view('tickets/details' ,compact('ticket'));
+        $comments = TicketComment::where('ticket_id', $id)->get();
+        return view('tickets/details' ,compact('ticket', 'comments'));
     }
     public function open()
     {
