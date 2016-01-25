@@ -25,7 +25,10 @@ class TicketsController extends Controller {
     public function details($id)
     {
         $ticket = Ticket::findOrFail($id);
-        $comments = TicketComment::where('ticket_id', $id)->get();
+        $comments = TicketComment::select('ticket_comments.*', 'users.name')
+            ->join('users', 'ticket_comments.user_id', '=','users.id')
+            ->where('ticket_id', $id)
+            ->get();
         return view('tickets/details' ,compact('ticket', 'comments'));
     }
     public function open()

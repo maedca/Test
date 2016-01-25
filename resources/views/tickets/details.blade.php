@@ -52,7 +52,7 @@
             <h3>Comentarios (6)</h3>
             @foreach($comments as $comment)
             <div class="well well-sm">
-                <p><strong>Gene Wintheiser</strong></p>
+                <p><strong>{{$comment->name}}</strong></p>
                 <p>{{$comment->comment}}</p>
                 <p class="date-t"><span class="glyphicon glyphicon-time"></span> 01/04/2015 12:21am</p>
             </div>
