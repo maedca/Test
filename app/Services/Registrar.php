@@ -2,7 +2,7 @@
 
 namespace Test\Services;
 
-use Test\User;
+use Test\Entities\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 

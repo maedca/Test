@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{trans(Route::currentRouteName().'_title')}}</title>
+    <title>Test</title>
 
     <link rel="stylesheet" href="{{asset('/assets/css/style.css')}}">
 
@@ -42,14 +42,7 @@
                     {!! Html::menu('test.menu') !!}
 
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Manuel Camacho <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    @include('layout/login')
                 </div>
             </div>
         </div>
